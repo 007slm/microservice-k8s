@@ -1,0 +1,65 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: @artifactId@
+    version: "@git.commit.id.abbrev@"
+    group: @groupId@
+  name: @artifactId@
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: @artifactId@
+      group: @groupId@
+
+  template:
+    metadata:
+      labels:
+        app: @artifactId@
+        version: "@git.commit.id.abbrev@"
+        group: @groupId@
+      name: @artifactId@
+    spec:
+      containers:
+        - name: @artifactId@
+          image: @groupId@/@artifactId@:@git.commit.id.abbrev@
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 200m
+              memory: 1Gi
+            requests:
+              cpu: 20m
+          ports:
+            - containerPort: 8080
+          securityContext:
+            privileged: false
+
+        - name: kong
+          env:
+            - name: KONG_DATABASE
+              value: "off"
+            - name: KONG_PERMALINKOPENTELEMETRY_TRACING
+              value: "on"
+
+
+            - name: KONG_NGINX_MASTER_PROCESS
+              value: "off"
+            - name: KONG_WORKER_PROCESSES
+              value: "1"
+            - name: KONG_ADMIN_LISTEN
+              value: "0.0.0.0:8001"
+            - name: KONG_DECLARATIVE_CONFIG_STRING
+              valueFrom:
+                configMapKeyRef:
+                  name: entry-kong-config
+                  key: kong.yml
+
+          image: kong/kong-gateway:3.0
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+            - containerPort: 8001

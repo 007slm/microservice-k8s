@@ -1,0 +1,19 @@
+apiVersion: loggie.io/v1beta1
+kind: LogConfig
+metadata:
+  name: entry
+  namespace: default
+spec:
+  selector:
+    type: pod
+    labelSelector:
+      app: entry
+  pipeline:
+    sources: |
+      - type: file
+        name: entry-log
+        paths:
+        - stdout
+    sink: |
+      type: loki
+      url: "http://loki.loki.svc:3100/loki/api/v1/push"

@@ -1,0 +1,991 @@
+Apache Maven 3.6.2 (40f52333136460af0dc0d7232c0dc0bcf0d9e117; 2019-08-27T23:06:16+08:00)
+Maven home: D:\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin\..
+Java version: 1.8.0_131, vendor: Oracle Corporation, runtime: C:\Program Files\Java\jdk1.8.0_131\jre
+Default locale: zh_CN, platform encoding: GBK
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.inject.* < plexus.core
+[DEBUG]   Imported: javax.enterprise.util.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from D:\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin\..\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\007sl\.m2\settings.xml
+[DEBUG] Reading global toolchains from D:\apache-maven-3.6.2-bin\apache-maven-3.6.2\bin\..\conf\toolchains.xml
+[DEBUG] Reading user toolchains from C:\Users\007sl\.m2\toolchains.xml
+[DEBUG] Using local repository at D:\maven
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for D:\maven
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.justep:entry:jar:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project org.springframework.boot:spring-boot-starter-parent:pom:2.7.5: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Extension realms for project org.springframework.boot:spring-boot-dependencies:pom:2.7.5: (none)
+[DEBUG] Looking up lifecycle mappings for packaging pom from ClassRealm[plexus.core, parent: null]
+[DEBUG] Resolving plugin prefix k8s from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix k8s to org.eclipse.jkube:kubernetes-maven-plugin from POM com.justep:entry:jar:0.0.1-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.justep:entry:jar:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [k8s:build]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --------------------------< com.justep:entry >--------------------------
+[INFO] Building entry 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Resolving plugin prefix k8s from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix k8s to org.eclipse.jkube:kubernetes-maven-plugin from POM com.justep:entry:jar:0.0.1-SNAPSHOT
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.justep:entry:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build (default-cli)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <apiVersion>${jkube.docker.apiVersion}</apiVersion>
+  <autoCreateCustomNetworks default-value="false">${jkube.watch.autoCreateCustomNetworks}</autoCreateCustomNetworks>
+  <autoPull>${jkube.docker.autoPull}</autoPull>
+  <buildRecreate default-value="none">${jkube.build.recreate}</buildRecreate>
+  <buildStrategy>${jkube.build.strategy}</buildStrategy>
+  <certPath>${jkube.docker.certPath}</certPath>
+  <containerNamePattern>${jkube.watch.containerNamePattern}</containerNamePattern>
+  <dockerHost>${jkube.docker.host}</dockerHost>
+  <environment>${jkube.environment}</environment>
+  <filter>${jkube.image.filter}</filter>
+  <forcePull default-value="false">${jkube.build.forcePull}</forcePull>
+  <imagePullPolicy>${jkube.docker.imagePullPolicy}</imagePullPolicy>
+  <images>
+    <image>
+      <name>entry</name>
+      <alias>entry</alias>
+      <build>
+        <from>openjdk:8</from>
+        <cmd>java -jar maven/entry-0.0.1-SNAPSHOT.jar</cmd>
+      </build>
+    </image>
+  </images>
+  <keepContainer default-value="false">${jkube.watch.keepContainer}</keepContainer>
+  <keepRunning default-value="false">${jkube.watch.keepRunning}</keepRunning>
+  <logDate>${jkube.docker.logDate}</logDate>
+  <logStdout default-value="false">${jkube.docker.logStdout}</logStdout>
+  <maxConnections default-value="100">${jkube.docker.maxConnections}</maxConnections>
+  <mojoExecution default-value="${mojoExecution}"/>
+  <namespace>${jkube.namespace}</namespace>
+  <offline default-value="false">${jkube.offline}</offline>
+  <outputDirectory default-value="target/docker">${jkube.build.target.dir}</outputDirectory>
+  <profile>${jkube.profile}</profile>
+  <project default-value="${project}"/>
+  <pullRegistry>${jkube.docker.pull.registry}</pullRegistry>
+  <registry>${jkube.docker.registry}</registry>
+  <removeVolumes default-value="false">${jkube.watch.removeVolumes}</removeVolumes>
+  <resourceDir default-value="${basedir}/src/main/jkube">${jkube.resourceDir}</resourceDir>
+  <session default-value="${session}"/>
+  <settings default-value="${settings}"/>
+  <skip default-value="false">${jkube.skip}</skip>
+  <skipBuild default-value="false">${jkube.skip.build}</skipBuild>
+  <skipBuildPom>${jkube.skip.build.pom}</skipBuildPom>
+  <skipExtendedAuth default-value="false">${jkube.docker.skip.extendedAuth}</skipExtendedAuth>
+  <skipMachine default-value="false">${jkube.docker.skip.machine}</skipMachine>
+  <sourceDirectory default-value="src/main/docker">${jkube.build.source.dir}</sourceDirectory>
+  <useColor default-value="true">${jkube.useColor}</useColor>
+  <useProjectClasspath default-value="false">${jkube.useProjectClasspath}</useProjectClasspath>
+  <verbose default-value="false">${jkube.docker.verbose}</verbose>
+  <watchFollow default-value="false">${jkube.watch.follow}</watchFollow>
+  <watchInterval default-value="5000">${jkube.watch.interval}</watchInterval>
+  <watchMode default-value="both">${jkube.watch.mode}</watchMode>
+  <watchPostExec>${jkube.watch.postExec}</watchPostExec>
+  <watchPostGoal>${jkube.watch.postGoal}</watchPostGoal>
+  <watchShowLogs>${jkube.watch.showLogs}</watchShowLogs>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=853800, ConflictMarker.markTime=424300, ConflictMarker.nodeCount=200, ConflictIdSorter.graphTime=404800, ConflictIdSorter.topsortTime=284700, ConflictIdSorter.conflictIdCount=86, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=5146600, ConflictResolver.conflictItemCount=198, DefaultDependencyCollector.collectTime=158983200, DefaultDependencyCollector.transformTime=8315400}
+[DEBUG] com.justep:entry:jar:0.0.1-SNAPSHOT
+[DEBUG]    org.springframework.boot:spring-boot-starter-web:jar:2.7.5:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]          org.springframework.boot:spring-boot-starter-logging:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]             ch.qos.logback:logback-classic:jar:1.2.11:compile (version managed from 1.2.11)
+[DEBUG]                ch.qos.logback:logback-core:jar:1.2.11:compile (version managed from 1.2.11)
+[DEBUG]             org.apache.logging.log4j:log4j-to-slf4j:jar:2.17.2:compile (version managed from 2.17.2)
+[DEBUG]                org.apache.logging.log4j:log4j-api:jar:2.17.2:compile (version managed from 2.17.2)
+[DEBUG]             org.slf4j:jul-to-slf4j:jar:1.7.36:compile (version managed from 1.7.36)
+[DEBUG]          jakarta.annotation:jakarta.annotation-api:jar:1.3.5:compile (version managed from 1.3.5)
+[DEBUG]          org.yaml:snakeyaml:jar:1.30:compile (version managed from 1.30)
+[DEBUG]       org.springframework.boot:spring-boot-starter-json:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]          com.fasterxml.jackson.core:jackson-databind:jar:2.13.4.2:compile (version managed from 2.13.4.2)
+[DEBUG]             com.fasterxml.jackson.core:jackson-annotations:jar:2.13.4:compile (version managed from 2.13.4)
+[DEBUG]             com.fasterxml.jackson.core:jackson-core:jar:2.13.4:compile (version managed from 2.13.4)
+[DEBUG]          com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.13.4:compile (version managed from 2.13.4)
+[DEBUG]          com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.13.4:compile (version managed from 2.13.4)
+[DEBUG]          com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.13.4:compile (version managed from 2.13.4)
+[DEBUG]       org.springframework.boot:spring-boot-starter-tomcat:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-core:jar:9.0.68:compile (version managed from 9.0.68)
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-el:jar:9.0.68:compile (version managed from 9.0.68)
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-websocket:jar:9.0.68:compile (version managed from 9.0.68)
+[DEBUG]       org.springframework:spring-web:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]          org.springframework:spring-beans:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]       org.springframework:spring-webmvc:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]          org.springframework:spring-aop:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]          org.springframework:spring-context:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]          org.springframework:spring-expression:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]    org.springframework.boot:spring-boot-starter-webflux:jar:2.7.5:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter-reactor-netty:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]          io.projectreactor.netty:reactor-netty-http:jar:1.0.24:compile (version managed from 1.0.24)
+[DEBUG]             io.netty:netty-codec-http:jar:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]                io.netty:netty-common:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-buffer:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-transport:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-codec:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-handler:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]             io.netty:netty-codec-http2:jar:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]             io.netty:netty-resolver-dns:jar:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]                io.netty:netty-resolver:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-codec-dns:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]             io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]                io.netty:netty-resolver-dns-classes-macos:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]             io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]                io.netty:netty-transport-native-unix-common:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]                io.netty:netty-transport-classes-epoll:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]             io.projectreactor.netty:reactor-netty-core:jar:1.0.24:compile (version managed from 1.0.24)
+[DEBUG]                io.netty:netty-handler-proxy:jar:4.1.84.Final:compile (version managed from 4.1.82.Final)
+[DEBUG]                   io.netty:netty-codec-socks:jar:4.1.84.Final:compile (version managed from 4.1.84.Final)
+[DEBUG]       org.springframework:spring-webflux:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]    org.springframework.boot:spring-boot-devtools:jar:2.7.5:runtime (optional)
+[DEBUG]       org.springframework.boot:spring-boot:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]       org.springframework.boot:spring-boot-autoconfigure:jar:2.7.5:compile (version managed from 2.7.5)
+[DEBUG]    org.springframework.boot:spring-boot-starter-test:jar:2.7.5:test
+[DEBUG]       org.springframework.boot:spring-boot-test:jar:2.7.5:test (version managed from 2.7.5)
+[DEBUG]       org.springframework.boot:spring-boot-test-autoconfigure:jar:2.7.5:test (version managed from 2.7.5)
+[DEBUG]       com.jayway.jsonpath:json-path:jar:2.7.0:test (version managed from 2.7.0)
+[DEBUG]          net.minidev:json-smart:jar:2.4.8:test (version managed from 2.4.7)
+[DEBUG]             net.minidev:accessors-smart:jar:2.4.8:test
+[DEBUG]                org.ow2.asm:asm:jar:9.1:test
+[DEBUG]          org.slf4j:slf4j-api:jar:1.7.36:compile (version managed from 1.7.33)
+[DEBUG]       jakarta.xml.bind:jakarta.xml.bind-api:jar:2.3.3:test (version managed from 2.3.3)
+[DEBUG]          jakarta.activation:jakarta.activation-api:jar:1.2.2:test (version managed from 1.2.2)
+[DEBUG]       org.assertj:assertj-core:jar:3.22.0:test (version managed from 3.22.0)
+[DEBUG]       org.hamcrest:hamcrest:jar:2.2:test (version managed from 2.2)
+[DEBUG]       org.junit.jupiter:junit-jupiter:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]          org.junit.jupiter:junit-jupiter-api:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]             org.opentest4j:opentest4j:jar:1.2.0:test
+[DEBUG]             org.junit.platform:junit-platform-commons:jar:1.8.2:test (version managed from 1.8.2)
+[DEBUG]             org.apiguardian:apiguardian-api:jar:1.1.2:test
+[DEBUG]          org.junit.jupiter:junit-jupiter-params:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]          org.junit.jupiter:junit-jupiter-engine:jar:5.8.2:test (version managed from 5.8.2)
+[DEBUG]             org.junit.platform:junit-platform-engine:jar:1.8.2:test (version managed from 1.8.2)
+[DEBUG]       org.mockito:mockito-core:jar:4.5.1:test (version managed from 4.5.1)
+[DEBUG]          net.bytebuddy:byte-buddy:jar:1.12.18:test (version managed from 1.12.9)
+[DEBUG]          net.bytebuddy:byte-buddy-agent:jar:1.12.18:test (version managed from 1.12.9)
+[DEBUG]          org.objenesis:objenesis:jar:3.2:test
+[DEBUG]       org.mockito:mockito-junit-jupiter:jar:4.5.1:test (version managed from 4.5.1)
+[DEBUG]       org.skyscreamer:jsonassert:jar:1.5.1:test (version managed from 1.5.1)
+[DEBUG]          com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[DEBUG]       org.springframework:spring-core:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]          org.springframework:spring-jcl:jar:5.3.23:compile (version managed from 5.3.23)
+[DEBUG]       org.springframework:spring-test:jar:5.3.23:test (version managed from 5.3.23)
+[DEBUG]       org.xmlunit:xmlunit-core:jar:2.9.0:test (version managed from 2.9.0)
+[DEBUG]    io.projectreactor:reactor-test:jar:3.4.24:test
+[DEBUG]       io.projectreactor:reactor-core:jar:3.4.24:compile (version managed from 3.4.24)
+[DEBUG]          org.reactivestreams:reactive-streams:jar:1.0.4:compile (version managed from 1.0.4)
+[INFO] 
+[INFO] --- kubernetes-maven-plugin:1.10.1:build (default-cli) @ entry ---
+[DEBUG] Dependency collection stats: {ConflictMarker.analyzeTime=761400, ConflictMarker.markTime=469400, ConflictMarker.nodeCount=430, ConflictIdSorter.graphTime=331700, ConflictIdSorter.topsortTime=130100, ConflictIdSorter.conflictIdCount=171, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=5312000, ConflictResolver.conflictItemCount=357, DefaultDependencyCollector.collectTime=316238300, DefaultDependencyCollector.transformTime=7342200}
+[DEBUG] org.eclipse.jkube:kubernetes-maven-plugin:jar:1.10.1
+[DEBUG]    org.eclipse.jkube:jkube-kit-config-service:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-config-resource:jar:1.10.1:compile (version managed from default)
+[DEBUG]       org.eclipse.jkube:jkube-kit-build-service-docker:jar:1.10.1:compile (version managed from default)
+[DEBUG]          org.eclipse.jkube:jkube-kit-build-api:jar:1.10.1:compile (version managed from default)
+[DEBUG]             commons-codec:commons-codec:jar:1.15:compile (version managed from default)
+[DEBUG]          com.github.jnr:jnr-unixsocket:jar:0.38.17:compile (version managed from default)
+[DEBUG]             com.github.jnr:jnr-ffi:jar:2.2.11:compile
+[DEBUG]                com.github.jnr:jffi:jar:1.3.9:compile
+[DEBUG]                com.github.jnr:jffi:jar:native:1.3.9:runtime
+[DEBUG]                org.ow2.asm:asm:jar:9.4:compile (version managed from default)
+[DEBUG]                org.ow2.asm:asm-commons:jar:9.2:compile
+[DEBUG]                org.ow2.asm:asm-analysis:jar:9.2:compile
+[DEBUG]                org.ow2.asm:asm-tree:jar:9.2:compile
+[DEBUG]                org.ow2.asm:asm-util:jar:9.2:compile
+[DEBUG]                com.github.jnr:jnr-a64asm:jar:1.0.0:compile
+[DEBUG]                com.github.jnr:jnr-x86asm:jar:1.0.2:compile
+[DEBUG]             com.github.jnr:jnr-constants:jar:0.10.3:compile
+[DEBUG]             com.github.jnr:jnr-enxio:jar:0.32.13:compile
+[DEBUG]             com.github.jnr:jnr-posix:jar:3.1.15:compile
+[DEBUG]          org.bouncycastle:bcpkix-jdk15on:jar:1.70:compile (version managed from default)
+[DEBUG]             org.bouncycastle:bcprov-jdk15on:jar:1.70:compile
+[DEBUG]             org.bouncycastle:bcutil-jdk15on:jar:1.70:compile
+[DEBUG]          org.apache.commons:commons-text:jar:1.10.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.eclipse.jkube:jkube-kit-build-service-jib:jar:1.10.1:compile (version managed from default)
+[DEBUG]          com.google.cloud.tools:jib-core:jar:0.22.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]             com.google.cloud.tools:jib-build-plan:jar:0.4.0:compile
+[DEBUG]             com.google.http-client:google-http-client:jar:1.34.0:runtime
+[DEBUG]                io.opencensus:opencensus-api:jar:0.24.0:runtime
+[DEBUG]                   io.grpc:grpc-context:jar:1.22.1:runtime
+[DEBUG]                io.opencensus:opencensus-contrib-http-util:jar:0.24.0:runtime
+[DEBUG]             com.google.http-client:google-http-client-apache-v2:jar:1.34.0:runtime
+[DEBUG]    org.eclipse.jkube:jkube-kit-common-maven:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-common:jar:1.10.1:compile (version managed from default)
+[DEBUG]          org.eclipse.jkube:jkube-kit-api:jar:1.10.1:compile (version managed from default)
+[DEBUG]          io.fabric8:kubernetes-client:jar:6.1.1:compile (version managed from default) (exclusions managed from default)
+[DEBUG]             io.fabric8:kubernetes-client-api:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-core:jar:6.1.1:compile
+[DEBUG]                   io.fabric8:kubernetes-model-common:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-gatewayapi:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-rbac:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-admissionregistration:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-apps:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-autoscaling:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-apiextensions:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-batch:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-certificates:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-coordination:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-discovery:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-events:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-extensions:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-flowcontrol:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-networking:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-metrics:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-policy:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-scheduling:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-storageclass:jar:6.1.1:compile
+[DEBUG]                io.fabric8:kubernetes-model-node:jar:6.1.1:compile
+[DEBUG]             io.fabric8:kubernetes-httpclient-okhttp:jar:6.1.1:runtime
+[DEBUG]                com.squareup.okhttp3:okhttp:jar:3.12.12:runtime
+[DEBUG]                   com.squareup.okio:okio:jar:1.15.0:runtime
+[DEBUG]                com.squareup.okhttp3:logging-interceptor:jar:3.12.12:runtime
+[DEBUG]             io.fabric8:zjsonpatch:jar:0.3.0:compile
+[DEBUG]          io.fabric8:openshift-client:jar:6.1.1:compile (version managed from default) (exclusions managed from default)
+[DEBUG]             io.fabric8:openshift-client-api:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-clusterautoscaling:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-operator:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-operatorhub:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-machine:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-whereabouts:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-monitoring:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-storageversionmigrator:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-tuned:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-console:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-config:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-machineconfig:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-miscellaneous:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-hive:jar:6.1.1:compile
+[DEBUG]                io.fabric8:openshift-model-installer:jar:6.1.1:compile
+[DEBUG]             com.github.mifmif:generex:jar:1.0.2:compile
+[DEBUG]                dk.brics.automaton:automaton:jar:1.11-8:compile
+[DEBUG]          org.apache.commons:commons-lang3:jar:3.11:compile (version managed from default)
+[DEBUG]          org.apache.commons:commons-compress:jar:1.21:compile (version managed from default)
+[DEBUG]          commons-io:commons-io:jar:2.8.0:compile (version managed from default)
+[DEBUG]          com.google.guava:guava:jar:31.1-jre:compile (version managed from default)
+[DEBUG]             com.google.guava:failureaccess:jar:1.0.1:compile
+[DEBUG]             com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[DEBUG]             com.google.code.findbugs:jsr305:jar:3.0.2:compile (version managed from default)
+[DEBUG]             org.checkerframework:checker-qual:jar:3.12.0:compile
+[DEBUG]             com.google.errorprone:error_prone_annotations:jar:2.11.0:compile
+[DEBUG]             com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-core:jar:2.14.0:compile (version managed from default)
+[DEBUG]          com.fasterxml.jackson.core:jackson-databind:jar:2.14.0:compile (version managed from default)
+[DEBUG]             com.fasterxml.jackson.core:jackson-annotations:jar:2.14.0:compile (version managed from default)
+[DEBUG]          com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.0:compile (version managed from default)
+[DEBUG]             org.yaml:snakeyaml:jar:1.33:compile
+[DEBUG]          com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.0:compile (version managed from default)
+[DEBUG]          org.slf4j:slf4j-api:jar:1.7.36:compile (version managed from default)
+[DEBUG]          org.eclipse.jgit:org.eclipse.jgit:jar:5.12.0.202106070339-r:compile (version managed from default) (exclusions managed from default)
+[DEBUG]             com.googlecode.javaewah:JavaEWAH:jar:1.1.7:compile
+[DEBUG]          javax.validation:validation-api:jar:2.0.1.Final:compile (version managed from default)
+[DEBUG]          org.fusesource.jansi:jansi:jar:2.4.0:compile (version managed from default)
+[DEBUG]          org.javassist:javassist:jar:3.20.0-GA:compile (version managed from default)
+[DEBUG]          com.networknt:json-schema-validator:jar:1.0.53:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.apache.maven:maven-archiver:jar:3.6.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.apache.maven:maven-core:jar:3.6.3:compile (version managed from default) (exclusions managed from default)
+[DEBUG]          org.apache.maven:maven-model:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-settings-builder:jar:3.6.3:compile
+[DEBUG]             org.codehaus.plexus:plexus-interpolation:jar:1.25:compile
+[DEBUG]             org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:compile
+[DEBUG]                org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]          org.apache.maven:maven-builder-support:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-artifact:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-plugin-api:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-model-builder:jar:3.6.3:compile
+[DEBUG]          org.apache.maven:maven-resolver-provider:jar:3.6.3:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-impl:jar:1.4.1:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-api:jar:1.4.1:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-spi:jar:1.4.1:compile
+[DEBUG]          org.apache.maven.resolver:maven-resolver-util:jar:1.4.1:compile
+[DEBUG]          org.apache.maven.shared:maven-shared-utils:jar:3.2.1:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.3.4:compile
+[DEBUG]             javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]                javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.4:compile
+[DEBUG]          com.google.inject:guice:jar:no_aop:4.2.1:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          javax.inject:javax.inject:jar:1:compile
+[DEBUG]       org.apache.maven.shared:maven-filtering:jar:3.3.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.6.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.codehaus.plexus:plexus-archiver:jar:3.6.0:compile (version managed from default) (exclusions managed from default)
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.6.0:compile (version managed from default)
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:3.0.24:compile (version managed from default)
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile (version managed from default) (exclusions managed from default)
+[DEBUG]    org.eclipse.jkube:jkube-kit-enricher-generic:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-enricher-api:jar:1.10.1:compile (version managed from default)
+[DEBUG]          org.eclipse.jkube:jkube-kit-config-image:jar:1.10.1:compile (version managed from default)
+[DEBUG]       io.fabric8:ianaservicehelper:jar:0.0.1:compile (version managed from default)
+[DEBUG]       com.google.code.gson:gson:jar:2.8.9:compile (version managed from default)
+[DEBUG]    org.eclipse.jkube:jkube-kit-enricher-specific:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-resource-service:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-resource-helm:jar:1.10.1:compile
+[DEBUG]       org.apache.httpcomponents:httpclient:jar:4.5.13:compile (version managed from default) (exclusions managed from default)
+[DEBUG]          org.apache.httpcomponents:httpcore:jar:4.4.15:compile (version managed from default)
+[DEBUG]          commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-generator-java-exec:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-generator-api:jar:1.10.1:compile (version managed from default)
+[DEBUG]          org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.6:compile (version managed from default)
+[DEBUG]          org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.6:compile (version managed from default)
+[DEBUG]          org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.6:compile (version managed from default)
+[DEBUG]    org.eclipse.jkube:jkube-kit-generator-karaf:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-generator-webapp:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-thorntail:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-spring-boot:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-watcher-api:jar:1.10.1:compile (version managed from default)
+[DEBUG]    org.eclipse.jkube:jkube-kit-quarkus:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-micronaut:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-openliberty:jar:1.10.1:compile
+[DEBUG]       org.eclipse.jkube:jkube-kit-microprofile:jar:1.10.1:compile (version managed from default)
+[DEBUG]    org.eclipse.jkube:jkube-kit-vertx:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-wildfly-jar:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-smallrye:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-profiles:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-watcher-standard:jar:1.10.1:compile
+[DEBUG]    org.eclipse.jkube:jkube-kit-remote-dev:jar:1.10.1:compile
+[DEBUG]       org.apache.sshd:sshd-core:jar:2.9.1:compile (version managed from default)
+[DEBUG]          org.apache.sshd:sshd-common:jar:2.9.1:compile
+[DEBUG]          org.slf4j:jcl-over-slf4j:jar:1.7.32:compile
+[DEBUG] Created new class realm plugin>org.eclipse.jkube:kubernetes-maven-plugin:1.10.1
+[DEBUG] Importing foreign packages into class realm plugin>org.eclipse.jkube:kubernetes-maven-plugin:1.10.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.eclipse.jkube:kubernetes-maven-plugin:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:kubernetes-maven-plugin:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-config-service:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-config-resource:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-build-service-docker:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-build-api:jar:1.10.1
+[DEBUG]   Included: commons-codec:commons-codec:jar:1.15
+[DEBUG]   Included: com.github.jnr:jnr-unixsocket:jar:0.38.17
+[DEBUG]   Included: com.github.jnr:jnr-ffi:jar:2.2.11
+[DEBUG]   Included: com.github.jnr:jffi:jar:1.3.9
+[DEBUG]   Included: com.github.jnr:jffi:jar:native:1.3.9
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.4
+[DEBUG]   Included: org.ow2.asm:asm-commons:jar:9.2
+[DEBUG]   Included: org.ow2.asm:asm-analysis:jar:9.2
+[DEBUG]   Included: org.ow2.asm:asm-tree:jar:9.2
+[DEBUG]   Included: org.ow2.asm:asm-util:jar:9.2
+[DEBUG]   Included: com.github.jnr:jnr-a64asm:jar:1.0.0
+[DEBUG]   Included: com.github.jnr:jnr-x86asm:jar:1.0.2
+[DEBUG]   Included: com.github.jnr:jnr-constants:jar:0.10.3
+[DEBUG]   Included: com.github.jnr:jnr-enxio:jar:0.32.13
+[DEBUG]   Included: com.github.jnr:jnr-posix:jar:3.1.15
+[DEBUG]   Included: org.bouncycastle:bcpkix-jdk15on:jar:1.70
+[DEBUG]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.70
+[DEBUG]   Included: org.bouncycastle:bcutil-jdk15on:jar:1.70
+[DEBUG]   Included: org.apache.commons:commons-text:jar:1.10.0
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-build-service-jib:jar:1.10.1
+[DEBUG]   Included: com.google.cloud.tools:jib-core:jar:0.22.0
+[DEBUG]   Included: com.google.cloud.tools:jib-build-plan:jar:0.4.0
+[DEBUG]   Included: com.google.http-client:google-http-client:jar:1.34.0
+[DEBUG]   Included: io.opencensus:opencensus-api:jar:0.24.0
+[DEBUG]   Included: io.grpc:grpc-context:jar:1.22.1
+[DEBUG]   Included: io.opencensus:opencensus-contrib-http-util:jar:0.24.0
+[DEBUG]   Included: com.google.http-client:google-http-client-apache-v2:jar:1.34.0
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-common-maven:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-common:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-api:jar:1.10.1
+[DEBUG]   Included: io.fabric8:kubernetes-client:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-client-api:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-core:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-common:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-gatewayapi:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-rbac:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-admissionregistration:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-apps:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-autoscaling:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-apiextensions:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-batch:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-certificates:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-coordination:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-discovery:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-events:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-extensions:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-flowcontrol:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-networking:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-metrics:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-policy:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-scheduling:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-storageclass:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-model-node:jar:6.1.1
+[DEBUG]   Included: io.fabric8:kubernetes-httpclient-okhttp:jar:6.1.1
+[DEBUG]   Included: com.squareup.okhttp3:okhttp:jar:3.12.12
+[DEBUG]   Included: com.squareup.okio:okio:jar:1.15.0
+[DEBUG]   Included: com.squareup.okhttp3:logging-interceptor:jar:3.12.12
+[DEBUG]   Included: io.fabric8:zjsonpatch:jar:0.3.0
+[DEBUG]   Included: io.fabric8:openshift-client:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-client-api:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-clusterautoscaling:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-operator:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-operatorhub:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-machine:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-whereabouts:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-monitoring:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-storageversionmigrator:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-tuned:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-console:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-config:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-machineconfig:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-miscellaneous:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-hive:jar:6.1.1
+[DEBUG]   Included: io.fabric8:openshift-model-installer:jar:6.1.1
+[DEBUG]   Included: com.github.mifmif:generex:jar:1.0.2
+[DEBUG]   Included: dk.brics.automaton:automaton:jar:1.11-8
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.11
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.21
+[DEBUG]   Included: commons-io:commons-io:jar:2.8.0
+[DEBUG]   Included: com.google.guava:guava:jar:31.1-jre
+[DEBUG]   Included: com.google.guava:failureaccess:jar:1.0.1
+[DEBUG]   Included: com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:3.0.2
+[DEBUG]   Included: org.checkerframework:checker-qual:jar:3.12.0
+[DEBUG]   Included: com.google.errorprone:error_prone_annotations:jar:2.11.0
+[DEBUG]   Included: com.google.j2objc:j2objc-annotations:jar:1.3
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-core:jar:2.14.0
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-databind:jar:2.14.0
+[DEBUG]   Included: com.fasterxml.jackson.core:jackson-annotations:jar:2.14.0
+[DEBUG]   Included: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:jar:2.14.0
+[DEBUG]   Included: org.yaml:snakeyaml:jar:1.33
+[DEBUG]   Included: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.14.0
+[DEBUG]   Included: org.eclipse.jgit:org.eclipse.jgit:jar:5.12.0.202106070339-r
+[DEBUG]   Included: com.googlecode.javaewah:JavaEWAH:jar:1.1.7
+[DEBUG]   Included: javax.validation:validation-api:jar:2.0.1.Final
+[DEBUG]   Included: org.javassist:javassist:jar:3.20.0-GA
+[DEBUG]   Included: com.networknt:json-schema-validator:jar:1.0.53
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:3.6.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.25
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven:maven-builder-support:jar:3.6.3
+[DEBUG]   Included: org.apache.maven.resolver:maven-resolver-util:jar:1.4.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.2.1
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.3.4
+[DEBUG]   Included: com.google.inject:guice:jar:no_aop:4.2.1
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:3.3.0
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.6.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:3.6.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.24
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.7
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-enricher-generic:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-enricher-api:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-config-image:jar:1.10.1
+[DEBUG]   Included: io.fabric8:ianaservicehelper:jar:0.0.1
+[DEBUG]   Included: com.google.code.gson:gson:jar:2.8.9
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-enricher-specific:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-resource-service:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-resource-helm:jar:1.10.1
+[DEBUG]   Included: org.apache.httpcomponents:httpclient:jar:4.5.13
+[DEBUG]   Included: org.apache.httpcomponents:httpcore:jar:4.4.15
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.2
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-generator-java-exec:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-generator-api:jar:1.10.1
+[DEBUG]   Included: org.jboss.shrinkwrap:shrinkwrap-api:jar:1.2.6
+[DEBUG]   Included: org.jboss.shrinkwrap:shrinkwrap-spi:jar:1.2.6
+[DEBUG]   Included: org.jboss.shrinkwrap:shrinkwrap-impl-base:jar:1.2.6
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-generator-karaf:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-generator-webapp:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-thorntail:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-spring-boot:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-watcher-api:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-quarkus:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-micronaut:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-openliberty:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-microprofile:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-vertx:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-wildfly-jar:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-smallrye:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-profiles:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-watcher-standard:jar:1.10.1
+[DEBUG]   Included: org.eclipse.jkube:jkube-kit-remote-dev:jar:1.10.1
+[DEBUG]   Included: org.apache.sshd:sshd-core:jar:2.9.1
+[DEBUG]   Included: org.apache.sshd:sshd-common:jar:2.9.1
+[DEBUG]   Included: org.slf4j:jcl-over-slf4j:jar:1.7.32
+[DEBUG] Configuring mojo org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build from plugin realm ClassRealm[plugin>org.eclipse.jkube:kubernetes-maven-plugin:1.10.1, parent: sun.misc.Launcher$AppClassLoader@55f96302]
+[DEBUG] Configuring mojo 'org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build' with basic configurator -->
+[DEBUG]   (f) autoCreateCustomNetworks = false
+[DEBUG]   (f) buildRecreate = none
+[DEBUG]   (f) forcePull = false
+[DEBUG]   (s) name = entry
+[DEBUG]   (s) alias = entry
+[DEBUG]   (f) from = openjdk:8
+[DEBUG]   (s)  = java -jar maven/entry-0.0.1-SNAPSHOT.jar
+[DEBUG]   (f) cmd = org.eclipse.jkube.kit.config.image.build.Arguments@3303317b
+[DEBUG]   (s) build = org.eclipse.jkube.kit.config.image.build.BuildConfiguration@80fa64ab
+[DEBUG]   (f) images = [org.eclipse.jkube.kit.config.image.ImageConfiguration@837677fe]
+[DEBUG]   (f) keepContainer = false
+[DEBUG]   (f) keepRunning = false
+[DEBUG]   (f) logStdout = false
+[DEBUG]   (f) maxConnections = 100
+[DEBUG]   (f) mojoExecution = org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build {execution: default-cli}
+[DEBUG]   (f) offline = false
+[DEBUG]   (f) outputDirectory = target/docker
+[DEBUG]   (f) project = MavenProject: com.justep:entry:0.0.1-SNAPSHOT @ D:\java\microservice-k8s\entry\pom.xml
+[DEBUG]   (f) removeVolumes = false
+[DEBUG]   (f) resourceDir = D:\java\microservice-k8s\entry\src\main\jkube
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@2881ad47
+[DEBUG]   (f) settings = org.apache.maven.execution.SettingsAdapter@62ce72ff
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) skipBuild = false
+[DEBUG]   (f) skipExtendedAuth = false
+[DEBUG]   (f) skipMachine = false
+[DEBUG]   (f) sourceDirectory = src/main/docker
+[DEBUG]   (f) useColor = true
+[DEBUG]   (f) useProjectClasspath = false
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) watchFollow = false
+[DEBUG]   (f) watchInterval = 5000
+[DEBUG]   (f) watchMode = both
+[DEBUG] -- end configuration --
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Connection request: [route: {}->http://localhost:2375][total available: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] Connection leased: [id: 0][route: {}->http://localhost:2375][total available: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] Opening connection {}->http://localhost:2375
+[DEBUG] Connecting to localhost/127.0.0.1:2375
+[DEBUG] Connection established 127.0.0.1:56205<->127.0.0.1:2375
+[DEBUG] Executing request GET /version HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-0 >> GET /version HTTP/1.1
+[DEBUG] http-outgoing-0 >> Accept: */*
+[DEBUG] http-outgoing-0 >> Content-Type: application/json
+[DEBUG] http-outgoing-0 >> Host: localhost:2375
+[DEBUG] http-outgoing-0 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)
+[DEBUG] http-outgoing-0 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-0 >> "GET /version HTTP/1.1[\r][\n]"
+[DEBUG] http-outgoing-0 >> "Accept: */*[\r][\n]"
+[DEBUG] http-outgoing-0 >> "Content-Type: application/json[\r][\n]"
+[DEBUG] http-outgoing-0 >> "Host: localhost:2375[\r][\n]"
+[DEBUG] http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)[\r][\n]"
+[DEBUG] http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] http-outgoing-0 >> "[\r][\n]"
+[DEBUG] http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] http-outgoing-0 << "Api-Version: 1.43[\r][\n]"
+[DEBUG] http-outgoing-0 << "Content-Type: application/json[\r][\n]"
+[DEBUG] http-outgoing-0 << "Date: Sat, 19 Nov 2022 14:25:28 GMT[\r][\n]"
+[DEBUG] http-outgoing-0 << "Docker-Experimental: false[\r][\n]"
+[DEBUG] http-outgoing-0 << "Ostype: linux[\r][\n]"
+[DEBUG] http-outgoing-0 << "Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)[\r][\n]"
+[DEBUG] http-outgoing-0 << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] http-outgoing-0 << "[\r][\n]"
+[DEBUG] http-outgoing-0 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-0 << Api-Version: 1.43
+[DEBUG] http-outgoing-0 << Content-Type: application/json
+[DEBUG] http-outgoing-0 << Date: Sat, 19 Nov 2022 14:25:28 GMT
+[DEBUG] http-outgoing-0 << Docker-Experimental: false
+[DEBUG] http-outgoing-0 << Ostype: linux
+[DEBUG] http-outgoing-0 << Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)
+[DEBUG] http-outgoing-0 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] http-outgoing-0: Close connection
+[DEBUG] Connection discarded
+[DEBUG] Connection released: [id: 0][route: {}->http://localhost:2375][total available: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[INFO] k8s: Building Docker image in Kubernetes mode
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Connection request: [route: {}->http://localhost:2375][total available: 0; route allocated: 0 of 100; total allocated: 0 of 100]
+[DEBUG] Connection leased: [id: 1][route: {}->http://localhost:2375][total available: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] Opening connection {}->http://localhost:2375
+[DEBUG] Connecting to localhost/127.0.0.1:2375
+[DEBUG] Connection established 127.0.0.1:56206<->127.0.0.1:2375
+[DEBUG] Executing request GET /v1.43/images/openjdk%3A8/json HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> GET /v1.43/images/openjdk%3A8/json HTTP/1.1
+[DEBUG] http-outgoing-1 >> Accept: */*
+[DEBUG] http-outgoing-1 >> Host: localhost:2375
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 >> "GET /v1.43/images/openjdk%3A8/json HTTP/1.1[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept: */*[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Host: localhost:2375[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] http-outgoing-1 >> "[\r][\n]"
+[DEBUG] http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] http-outgoing-1 << "Api-Version: 1.43[\r][\n]"
+[DEBUG] http-outgoing-1 << "Content-Type: application/json[\r][\n]"
+[DEBUG] http-outgoing-1 << "Date: Sat, 19 Nov 2022 14:25:29 GMT[\r][\n]"
+[DEBUG] http-outgoing-1 << "Docker-Experimental: false[\r][\n]"
+[DEBUG] http-outgoing-1 << "Ostype: linux[\r][\n]"
+[DEBUG] http-outgoing-1 << "Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)[\r][\n]"
+[DEBUG] http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] http-outgoing-1 << HTTP/1.1 200 OK
+[DEBUG] http-outgoing-1 << Api-Version: 1.43
+[DEBUG] http-outgoing-1 << Content-Type: application/json
+[DEBUG] http-outgoing-1 << Date: Sat, 19 Nov 2022 14:25:29 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: false
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)
+[DEBUG] http-outgoing-1 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] http-outgoing-1 << "690[\r][\n]"
+[DEBUG] http-outgoing-1 << "{"Id":"sha256:8a9d5c43f540e8d0c003c723a2c8bd20ae350a2efed6fb5719cae33b026f8e7c","RepoTags":["openjdk:8"],"RepoDigests":[],"Parent":"","Comment":"","Created":"0001-01-01T00:00:00Z","Container":"","ContainerConfig":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":null,"Cmd":null,"Image":"","Volumes":null,"WorkingDir":"","Entrypoint":null,"OnBuild":null,"Labels":null},"DockerVersion":"","Author":"","Config":{"Hostname":"","Domainname":"","User":"","AttachStdin":false,"AttachStdout":false,"AttachStderr":false,"Tty":false,"OpenStdin":false,"StdinOnce":false,"Env":["PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin","JAVA_HOME=/usr/local/openjdk-8","LANG=C.UTF-8","JAVA_VERSION=8u312"],"Cmd":["bash"],"Image":"","Volumes":null,"WorkingDir":"","Entrypoint":null,"OnBuild":null,"Labels":null},"Architecture":"amd64","Os":"linux","Size":236940026,"VirtualSize":236940026,"GraphDriver":{"Data":null,"Name":"stargz"},"RootFS":{"Type":"layers","Layers":["sha256:11936051f93baf5a4fb090a8fa0999309b8173556f7826598e235e8a82127bce","sha256:31892cc314cb1993ba1b8eb5f3002c4e9f099a9237af0d03d1893c6fcc559aab","sha256:8bf42db0de72f74f4ef0c1d1743f5d54efc3491ee38f4af6d914a6032148b78e","sha256:26a504e63be4c63395f216d70b1b8af52263a5289908df8e96a0e7c840813adc","sha256:f9e18e59a5651609a1503ac17dcfc05856b5bea21e41595828471f02ad56a225","sha256:7c245b2fe4f1f321795c13471007fc6b5561c386c71818e9b46aca2725263034","sha256:bff9fe6e429cce79bee12219c3eebc79fb52a195928a3baa8927e096040646ab"]},"Metadata":{"LastTagTime":"2022-11-19T12:11:42.579457736Z"}}[\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] http-outgoing-1 << "0[\r][\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] Connection [id: 1][route: {}->http://localhost:2375] can be kept alive indefinitely
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection released: [id: 1][route: {}->http://localhost:2375][total available: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] k8s: Build args set {}
+[DEBUG] k8s: Build args set {}
+[DEBUG] k8s: Build args set {}
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Connection request: [route: {}->http://localhost:2375][total available: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] Connection leased: [id: 1][route: {}->http://localhost:2375][total available: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request GET /v1.43/images/entry/json HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> GET /v1.43/images/entry/json HTTP/1.1
+[DEBUG] http-outgoing-1 >> Accept: */*
+[DEBUG] http-outgoing-1 >> Host: localhost:2375
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 >> "GET /v1.43/images/entry/json HTTP/1.1[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept: */*[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Host: localhost:2375[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] http-outgoing-1 >> "[\r][\n]"
+[DEBUG] http-outgoing-1 << "HTTP/1.1 404 Not Found[\r][\n]"
+[DEBUG] http-outgoing-1 << "Api-Version: 1.43[\r][\n]"
+[DEBUG] http-outgoing-1 << "Content-Type: application/json[\r][\n]"
+[DEBUG] http-outgoing-1 << "Date: Sat, 19 Nov 2022 14:25:29 GMT[\r][\n]"
+[DEBUG] http-outgoing-1 << "Docker-Experimental: false[\r][\n]"
+[DEBUG] http-outgoing-1 << "Ostype: linux[\r][\n]"
+[DEBUG] http-outgoing-1 << "Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)[\r][\n]"
+[DEBUG] http-outgoing-1 << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] http-outgoing-1 << HTTP/1.1 404 Not Found
+[DEBUG] http-outgoing-1 << Api-Version: 1.43
+[DEBUG] http-outgoing-1 << Content-Type: application/json
+[DEBUG] http-outgoing-1 << Date: Sat, 19 Nov 2022 14:25:29 GMT
+[DEBUG] http-outgoing-1 << Docker-Experimental: false
+[DEBUG] http-outgoing-1 << Ostype: linux
+[DEBUG] http-outgoing-1 << Server: Docker/22.06.0-beta.0-407-g7a5cce156e.m (linux)
+[DEBUG] http-outgoing-1 << Transfer-Encoding: chunked
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] http-outgoing-1 << "1b[\r][\n]"
+[DEBUG] http-outgoing-1 << "{"message":"id not found"}[\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] http-outgoing-1 << "0[\r][\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] Connection [id: 1][route: {}->http://localhost:2375] can be kept alive indefinitely
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection released: [id: 1][route: {}->http://localhost:2375][total available: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[INFO] k8s: [entry:latest] "entry": Created docker-build.tar in 26 milliseconds
+[DEBUG] CookieSpec selected: default
+[DEBUG] Auth cache not set in the context
+[DEBUG] Connection request: [route: {}->http://localhost:2375][total available: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] Connection leased: [id: 1][route: {}->http://localhost:2375][total available: 0; route allocated: 1 of 100; total allocated: 1 of 100]
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Executing request POST /v1.43/build?forcerm=1&nocache=0&t=entry HTTP/1.1
+[DEBUG] Target auth state: UNCHALLENGED
+[DEBUG] Proxy auth state: UNCHALLENGED
+[DEBUG] http-outgoing-1 >> POST /v1.43/build?forcerm=1&nocache=0&t=entry HTTP/1.1
+[DEBUG] http-outgoing-1 >> Accept: */*
+[DEBUG] http-outgoing-1 >> Content-Type: application/x-tar
+[DEBUG] http-outgoing-1 >> Content-Length: 2560
+[DEBUG] http-outgoing-1 >> Host: localhost:2375
+[DEBUG] http-outgoing-1 >> Connection: Keep-Alive
+[DEBUG] http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)
+[DEBUG] http-outgoing-1 >> Accept-Encoding: gzip,deflate
+[DEBUG] http-outgoing-1 >> "POST /v1.43/build?forcerm=1&nocache=0&t=entry HTTP/1.1[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept: */*[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Content-Type: application/x-tar[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Content-Length: 2560[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Host: localhost:2375[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_131)[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] http-outgoing-1 >> "[\r][\n]"
+[DEBUG] http-outgoing-1 >> "Dockerfile[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]0100644 0000000 0000000 00000000120 14336163531 013550[0x0] 0[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]ustar[0x0]00SLM-PC\007slm[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]0000000 0000000 [0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]FROM openjdk:8[\n]"
+[DEBUG] http-outgoing-1 >> "COPY /maven /maven/[\n]"
+[DEBUG] http-outgoing-1 >> "CMD java -jar maven/entry-0.0.1-SNAPSHOT.jar[\n]"
+[DEBUG] http-outgoing-1 >> "[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]maven/[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]0040755 0000000 0000000 00000000000 14336163026 012675[0x0] 5[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]ustar[0x0]00SLM-PC\007slm[0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]0000000 0000000 [0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0][0x0]"
+[DEBUG] http-outgoing-1 << "HTTP/1.1 502 Bad Gateway[\r][\n]"
+[DEBUG] http-outgoing-1 << "Content-Type: text/plain; charset=utf-8[\r][\n]"
+[DEBUG] http-outgoing-1 << "X-Content-Type-Options: nosniff[\r][\n]"
+[DEBUG] http-outgoing-1 << "Date: Sat, 19 Nov 2022 14:25:29 GMT[\r][\n]"
+[DEBUG] http-outgoing-1 << "Content-Length: 32[\r][\n]"
+[DEBUG] http-outgoing-1 << "[\r][\n]"
+[DEBUG] http-outgoing-1 << "Bad response from Docker engine[\n]"
+[DEBUG] http-outgoing-1 << HTTP/1.1 502 Bad Gateway
+[DEBUG] http-outgoing-1 << Content-Type: text/plain; charset=utf-8
+[DEBUG] http-outgoing-1 << X-Content-Type-Options: nosniff
+[DEBUG] http-outgoing-1 << Date: Sat, 19 Nov 2022 14:25:29 GMT
+[DEBUG] http-outgoing-1 << Content-Length: 32
+[DEBUG] Connection can be kept alive indefinitely
+[DEBUG] Connection [id: 1][route: {}->http://localhost:2375] can be kept alive indefinitely
+[DEBUG] http-outgoing-1: set socket timeout to 0
+[DEBUG] Connection released: [id: 1][route: {}->http://localhost:2375][total available: 1; route allocated: 1 of 100; total allocated: 1 of 100]
+[ERROR] k8s: Failed to execute the build [Error while trying to build the image: Unable to build image [entry] : Bad response from Docker engine (Bad Gateway: 502)]
+[DEBUG] Connection manager is shutting down
+[DEBUG] http-outgoing-1: Close connection
+[DEBUG] Connection manager shut down
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.667 s
+[INFO] Finished at: 2022-11-19T22:25:29+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build (default-cli) on project entry: Failed to execute the build: Error while trying to build the image: Unable to build image [entry] : Bad response from Docker engine (Bad Gateway: 502) -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal org.eclipse.jkube:kubernetes-maven-plugin:1.10.1:build (default-cli) on project entry: Failed to execute the build
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Failed to execute the build
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.buildAndTag (AbstractDockerMojo.java:581)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.executeBuildGoal (AbstractDockerMojo.java:548)
+    at org.eclipse.jkube.maven.plugin.mojo.build.BuildMojo.executeInternal (BuildMojo.java:49)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.doExecute (AbstractDockerMojo.java:451)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.execute (AbstractDockerMojo.java:413)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.eclipse.jkube.kit.config.service.JKubeServiceException: Error while trying to build the image: Unable to build image [entry] : Bad response from Docker engine (Bad Gateway: 502)
+    at org.eclipse.jkube.kit.config.service.kubernetes.DockerBuildService.buildSingleImage (DockerBuildService.java:64)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.processImage (AbstractImageBuildService.java:57)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.build (AbstractImageBuildService.java:36)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.buildAndTag (AbstractDockerMojo.java:578)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.executeBuildGoal (AbstractDockerMojo.java:548)
+    at org.eclipse.jkube.maven.plugin.mojo.build.BuildMojo.executeInternal (BuildMojo.java:49)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.doExecute (AbstractDockerMojo.java:451)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.execute (AbstractDockerMojo.java:413)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.eclipse.jkube.kit.build.service.docker.access.DockerAccessException: Unable to build image [entry] : Bad response from Docker engine (Bad Gateway: 502)
+    at org.eclipse.jkube.kit.build.service.docker.access.hc.DockerAccessWithHcClient.buildImage (DockerAccessWithHcClient.java:269)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.doBuildImage (BuildService.java:183)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.buildImage (BuildService.java:144)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.buildImage (BuildService.java:78)
+    at org.eclipse.jkube.kit.config.service.kubernetes.DockerBuildService.buildSingleImage (DockerBuildService.java:59)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.processImage (AbstractImageBuildService.java:57)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.build (AbstractImageBuildService.java:36)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.buildAndTag (AbstractDockerMojo.java:578)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.executeBuildGoal (AbstractDockerMojo.java:548)
+    at org.eclipse.jkube.maven.plugin.mojo.build.BuildMojo.executeInternal (BuildMojo.java:49)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.doExecute (AbstractDockerMojo.java:451)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.execute (AbstractDockerMojo.java:413)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.eclipse.jkube.kit.build.service.docker.access.hc.http.HttpRequestException: Bad response from Docker engine (Bad Gateway: 502)
+    at org.eclipse.jkube.kit.build.service.docker.access.hc.ApacheHttpClientDelegate$StatusCodeCheckerResponseHandler.handleResponse (ApacheHttpClientDelegate.java:200)
+    at org.apache.http.impl.client.CloseableHttpClient.execute (CloseableHttpClient.java:223)
+    at org.apache.http.impl.client.CloseableHttpClient.execute (CloseableHttpClient.java:165)
+    at org.apache.http.impl.client.CloseableHttpClient.execute (CloseableHttpClient.java:140)
+    at org.eclipse.jkube.kit.build.service.docker.access.hc.ApacheHttpClientDelegate.post (ApacheHttpClientDelegate.java:121)
+    at org.eclipse.jkube.kit.build.service.docker.access.hc.DockerAccessWithHcClient.buildImage (DockerAccessWithHcClient.java:267)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.doBuildImage (BuildService.java:183)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.buildImage (BuildService.java:144)
+    at org.eclipse.jkube.kit.build.service.docker.BuildService.buildImage (BuildService.java:78)
+    at org.eclipse.jkube.kit.config.service.kubernetes.DockerBuildService.buildSingleImage (DockerBuildService.java:59)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.processImage (AbstractImageBuildService.java:57)
+    at org.eclipse.jkube.kit.config.service.AbstractImageBuildService.build (AbstractImageBuildService.java:36)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.buildAndTag (AbstractDockerMojo.java:578)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.executeBuildGoal (AbstractDockerMojo.java:548)
+    at org.eclipse.jkube.maven.plugin.mojo.build.BuildMojo.executeInternal (BuildMojo.java:49)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.doExecute (AbstractDockerMojo.java:451)
+    at org.eclipse.jkube.maven.plugin.mojo.build.AbstractDockerMojo.execute (AbstractDockerMojo.java:413)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:210)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:156)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:148)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:305)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:192)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:105)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:956)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:288)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:192)
+    at sun.reflect.NativeMethodAccessorImpl.invoke0 (Native Method)
+    at sun.reflect.NativeMethodAccessorImpl.invoke (NativeMethodAccessorImpl.java:62)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke (DelegatingMethodAccessorImpl.java:43)
+    at java.lang.reflect.Method.invoke (Method.java:498)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

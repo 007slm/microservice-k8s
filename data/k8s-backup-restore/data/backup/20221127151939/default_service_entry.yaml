@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"labels":{"app":"entry","group":"com.justep","version":"cb56475"},"name":"entry","namespace":"default"},"spec":{"ports":[{"name":"tomcat","port":8080,"protocol":"TCP","targetPort":8080},{"name":"kong","port":8000,"protocol":"TCP","targetPort":8000},{"name":"kong-admin","port":8001,"protocol":"TCP","targetPort":8001}],"selector":{"app":"entry","group":"com.justep"}}}
+  creationTimestamp: "2022-11-21T13:38:01Z"
+  labels:
+    app: entry
+    group: com.justep
+    version: cb56475
+  name: entry
+  namespace: default
+  resourceVersion: "240129"
+  uid: 2343293e-f4ba-4a16-a950-e55d3ca3b5bd
+spec:
+  clusterIP: 10.97.72.157
+  clusterIPs:
+  - 10.97.72.157
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: tomcat
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  - name: kong
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  - name: kong-admin
+    port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    app: entry
+    group: com.justep
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

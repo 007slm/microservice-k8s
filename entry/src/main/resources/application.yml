@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: entry
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  endpoint:
+    prometheus:
+      enabled: true
+    health:
+      show-details: always
+
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+server:
+  tomcat:
+    threads:
+      max: 200
+
+
+

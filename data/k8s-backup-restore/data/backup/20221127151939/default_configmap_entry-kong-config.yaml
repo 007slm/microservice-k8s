@@ -1,0 +1,14 @@
+apiVersion: v1
+data:
+  kong.yml: |
+    {"_format_version":"1.1","services":[{"host":"entry.default.svc","port":8080,"protocol":"http","routes":[{"paths":["/entry"]}]}],"plugins":[{"name":"prometheus","config":{"status_code_metrics":true,"latency_metrics":true,"bandwidth_metrics":true,"upstream_health_metrics":true,}}]}
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":{"kong.yml":"{\"_format_version\":\"1.1\",\"services\":[{\"host\":\"entry.default.svc\",\"port\":8080,\"protocol\":\"http\",\"routes\":[{\"paths\":[\"/entry\"]}]}],\"plugins\":[{\"name\":\"prometheus\",\"config\":{\"status_code_metrics\":true,\"latency_metrics\":true,\"bandwidth_metrics\":true,\"upstream_health_metrics\":true,}}]}\n"},"kind":"ConfigMap","metadata":{"annotations":{},"name":"entry-kong-config","namespace":"default"}}
+  creationTimestamp: "2022-11-26T09:17:58Z"
+  name: entry-kong-config
+  namespace: default
+  resourceVersion: "244626"
+  uid: e2509c62-036b-4740-9e9e-21e7eb04083a

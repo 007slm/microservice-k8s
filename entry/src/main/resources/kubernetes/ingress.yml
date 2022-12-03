@@ -1,0 +1,46 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  labels:
+    app: @artifactId@
+    group: @groupId@
+  name: @artifactId@
+  namespace: default
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/session-cookie-name: router
+spec:
+  rules:
+  - host: @groupId@.@artifactId@
+    http:
+      paths:
+      - backend:
+          service:
+            name: @artifactId@
+            port:
+              number: 8000
+        path: /
+        pathType: ImplementationSpecific
+
+  - host: @groupId@.@artifactId@-admin
+    http:
+      paths:
+          - backend:
+              service:
+                name: @artifactId@
+                port:
+                  number: 8001
+            path: /
+            pathType: ImplementationSpecific
+  - host: @groupId@.@artifactId@-tomcat
+    http:
+      paths:
+        - backend:
+            service:
+              name: @artifactId@
+              port:
+                number: 8080
+          path: /
+          pathType: ImplementationSpecific

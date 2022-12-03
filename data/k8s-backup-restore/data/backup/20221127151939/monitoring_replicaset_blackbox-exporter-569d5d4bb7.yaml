@@ -1,0 +1,156 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2022-11-23T13:55:47Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: exporter
+    app.kubernetes.io/name: blackbox-exporter
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 0.21.0
+    pod-template-hash: 569d5d4bb7
+  name: blackbox-exporter-569d5d4bb7
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: blackbox-exporter
+    uid: 2a796478-a65d-4d4a-a11c-7b108ff33c87
+  resourceVersion: "279517"
+  uid: 807fde20-184f-42fc-abf1-4b849391746a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: blackbox-exporter
+      app.kubernetes.io/part-of: kube-prometheus
+      pod-template-hash: 569d5d4bb7
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: blackbox-exporter
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/component: exporter
+        app.kubernetes.io/name: blackbox-exporter
+        app.kubernetes.io/part-of: kube-prometheus
+        app.kubernetes.io/version: 0.21.0
+        pod-template-hash: 569d5d4bb7
+    spec:
+      automountServiceAccountToken: true
+      containers:
+      - args:
+        - --config.file=/etc/blackbox_exporter/config.yml
+        - --web.listen-address=:19115
+        image: quay.io/prometheus/blackbox-exporter:v0.21.0
+        imagePullPolicy: IfNotPresent
+        name: blackbox-exporter
+        ports:
+        - containerPort: 19115
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 20m
+            memory: 40Mi
+          requests:
+            cpu: 10m
+            memory: 20Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 65534
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /etc/blackbox_exporter/
+          name: config
+          readOnly: true
+      - args:
+        - --webhook-url=http://localhost:19115/-/reload
+        - --volume-dir=/etc/blackbox_exporter/
+        image: jimmidyson/configmap-reload:v0.5.0
+        imagePullPolicy: IfNotPresent
+        name: module-configmap-reloader
+        resources:
+          limits:
+            cpu: 20m
+            memory: 40Mi
+          requests:
+            cpu: 10m
+            memory: 20Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 65534
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/blackbox_exporter/
+          name: config
+          readOnly: true
+      - args:
+        - --logtostderr
+        - --secure-listen-address=:9115
+        - --tls-cipher-suites=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
+        - --upstream=http://127.0.0.1:19115/
+        image: quay.io/brancz/kube-rbac-proxy:v0.12.0
+        imagePullPolicy: IfNotPresent
+        name: kube-rbac-proxy
+        ports:
+        - containerPort: 9115
+          name: https
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 20m
+            memory: 40Mi
+          requests:
+            cpu: 10m
+            memory: 20Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+          runAsGroup: 65532
+          runAsNonRoot: true
+          runAsUser: 65532
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: blackbox-exporter
+      serviceAccountName: blackbox-exporter
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - configMap:
+          defaultMode: 420
+          name: blackbox-exporter-configuration
+        name: config
+status:
+  availableReplicas: 1
+  fullyLabeledReplicas: 1
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1

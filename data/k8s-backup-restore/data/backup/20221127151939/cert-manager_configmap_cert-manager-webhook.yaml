@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"v1","data":null,"kind":"ConfigMap","metadata":{"annotations":{},"labels":{"app":"webhook","app.kubernetes.io/component":"webhook","app.kubernetes.io/instance":"cert-manager","app.kubernetes.io/name":"webhook"},"name":"cert-manager-webhook","namespace":"cert-manager"}}
+  creationTimestamp: "2022-11-27T04:18:21Z"
+  labels:
+    app: webhook
+    app.kubernetes.io/component: webhook
+    app.kubernetes.io/instance: cert-manager
+    app.kubernetes.io/name: webhook
+  name: cert-manager-webhook
+  namespace: cert-manager
+  resourceVersion: "281144"
+  uid: 1faa45e5-0834-4dab-91db-1850e88427da

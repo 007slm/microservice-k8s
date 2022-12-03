@@ -1,0 +1,199 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    prometheus-operator-input-hash: "16940821739618979916"
+  creationTimestamp: "2022-11-23T13:57:25Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: alert-router
+    app.kubernetes.io/instance: main
+    app.kubernetes.io/name: alertmanager
+    app.kubernetes.io/part-of: kube-prometheus
+    app.kubernetes.io/version: 0.24.0
+  name: alertmanager-main
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Alertmanager
+    name: main
+    uid: 3d5d929d-2959-491d-ab56-4c7992623bad
+  resourceVersion: "279723"
+  uid: ef039e09-5bd8-4be1-8785-b76abd3466c1
+spec:
+  podManagementPolicy: Parallel
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      alertmanager: main
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/managed-by: prometheus-operator
+      app.kubernetes.io/name: alertmanager
+  serviceName: alertmanager-operated
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: alertmanager
+      creationTimestamp: null
+      labels:
+        alertmanager: main
+        app.kubernetes.io/component: alert-router
+        app.kubernetes.io/instance: main
+        app.kubernetes.io/managed-by: prometheus-operator
+        app.kubernetes.io/name: alertmanager
+        app.kubernetes.io/part-of: kube-prometheus
+        app.kubernetes.io/version: 0.24.0
+    spec:
+      containers:
+      - args:
+        - --config.file=/etc/alertmanager/config/alertmanager.yaml
+        - --storage.path=/alertmanager
+        - --data.retention=120h
+        - --cluster.listen-address=[$(POD_IP)]:9094
+        - --web.listen-address=:9093
+        - --web.route-prefix=/
+        - --cluster.peer=alertmanager-main-0.alertmanager-operated:9094
+        - --cluster.peer=alertmanager-main-1.alertmanager-operated:9094
+        - --cluster.peer=alertmanager-main-2.alertmanager-operated:9094
+        - --cluster.reconnect-timeout=5m
+        env:
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: status.podIP
+        image: quay.io/prometheus/alertmanager:v0.24.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 10
+          httpGet:
+            path: /-/healthy
+            port: web
+            scheme: HTTP
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 3
+        name: alertmanager
+        ports:
+        - containerPort: 9093
+          name: web
+          protocol: TCP
+        - containerPort: 9094
+          name: mesh-tcp
+          protocol: TCP
+        - containerPort: 9094
+          name: mesh-udp
+          protocol: UDP
+        readinessProbe:
+          failureThreshold: 10
+          httpGet:
+            path: /-/ready
+            port: web
+            scheme: HTTP
+          initialDelaySeconds: 3
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 3
+        resources:
+          limits:
+            cpu: 100m
+            memory: 100Mi
+          requests:
+            cpu: 4m
+            memory: 100Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/alertmanager/config
+          name: config-volume
+        - mountPath: /etc/alertmanager/certs
+          name: tls-assets
+          readOnly: true
+        - mountPath: /alertmanager
+          name: alertmanager-main-db
+      - args:
+        - --listen-address=:8080
+        - --reload-url=http://localhost:9093/-/reload
+        - --watched-dir=/etc/alertmanager/config
+        command:
+        - /bin/prometheus-config-reloader
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: SHARD
+          value: "-1"
+        image: quay.io/prometheus-operator/prometheus-config-reloader:v0.57.0
+        imagePullPolicy: IfNotPresent
+        name: config-reloader
+        ports:
+        - containerPort: 8080
+          name: reloader-web
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: FallbackToLogsOnError
+        volumeMounts:
+        - mountPath: /etc/alertmanager/config
+          name: config-volume
+          readOnly: true
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 2000
+        runAsNonRoot: true
+        runAsUser: 1000
+      serviceAccount: alertmanager-main
+      serviceAccountName: alertmanager-main
+      terminationGracePeriodSeconds: 120
+      volumes:
+      - name: config-volume
+        secret:
+          defaultMode: 420
+          secretName: alertmanager-main-generated
+      - name: tls-assets
+        projected:
+          defaultMode: 420
+          sources:
+          - secret:
+              name: alertmanager-main-tls-assets-0
+      - emptyDir: {}
+        name: alertmanager-main-db
+  updateStrategy:
+    type: RollingUpdate
+status:
+  availableReplicas: 3
+  collisionCount: 0
+  currentReplicas: 3
+  currentRevision: alertmanager-main-5d4b95bbd
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updateRevision: alertmanager-main-5d4b95bbd
+  updatedReplicas: 3

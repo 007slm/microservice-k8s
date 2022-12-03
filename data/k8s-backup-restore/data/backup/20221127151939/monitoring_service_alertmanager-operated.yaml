@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2022-11-23T13:57:25Z"
+  labels:
+    operated-alertmanager: "true"
+  name: alertmanager-operated
+  namespace: monitoring
+  ownerReferences:
+  - apiVersion: monitoring.coreos.com/v1
+    kind: Alertmanager
+    name: main
+    uid: 3d5d929d-2959-491d-ab56-4c7992623bad
+  resourceVersion: "190605"
+  uid: 668628c6-970e-4418-a018-d8b1d99f8769
+spec:
+  clusterIP: None
+  clusterIPs:
+  - None
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: web
+    port: 9093
+    protocol: TCP
+    targetPort: web
+  - name: tcp-mesh
+    port: 9094
+    protocol: TCP
+    targetPort: 9094
+  - name: udp-mesh
+    port: 9094
+    protocol: UDP
+    targetPort: 9094
+  selector:
+    app.kubernetes.io/name: alertmanager
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

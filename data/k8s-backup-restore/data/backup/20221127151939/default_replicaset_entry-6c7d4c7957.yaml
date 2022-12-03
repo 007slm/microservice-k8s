@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "16"
+  creationTimestamp: "2022-11-26T16:15:08Z"
+  generation: 2
+  labels:
+    app: entry
+    group: com.justep
+    pod-template-hash: 6c7d4c7957
+    version: cb56475
+  name: entry-6c7d4c7957
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: entry
+    uid: 5e0396d3-09a3-4847-9167-ca14b23049cf
+  resourceVersion: "276074"
+  uid: 6da00922-be38-4052-bd71-2289e18bd93f
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      app: entry
+      group: com.justep
+      pod-template-hash: 6c7d4c7957
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: entry
+        group: com.justep
+        pod-template-hash: 6c7d4c7957
+        version: cb56475
+      name: entry
+    spec:
+      containers:
+      - image: com.justep/entry:cb56475
+        imagePullPolicy: IfNotPresent
+        name: entry
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 200m
+            memory: 1Gi
+          requests:
+            cpu: 20m
+        securityContext:
+          privileged: false
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: KONG_DATABASE
+          value: "off"
+        - name: KONG_NGINX_DAEMON
+          value: "off"
+        - name: KONG_NGINX_WORKER_PROCESSES
+          value: "1"
+        - name: KONG_MEM_CACHE_SIZE
+          value: 24m
+        - name: KONG_ADMIN_LISTEN
+          value: 0.0.0.0:8001
+        - name: KONG_DECLARATIVE_CONFIG_STRING
+          valueFrom:
+            configMapKeyRef:
+              key: kong.yml
+              name: entry-kong-config
+        image: kong/kong-gateway:3.0
+        imagePullPolicy: IfNotPresent
+        name: kong
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        - containerPort: 8001
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  observedGeneration: 2
+  replicas: 0

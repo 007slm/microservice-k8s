@@ -1,0 +1,19 @@
+apiVersion: loggie.io/v1beta1
+kind:  ClusterLogConfig
+metadata:
+  name: nodeloggie
+spec:
+  selector:
+    type: node
+    nodeSelector:
+      name: docker-desktop
+  pipeline:
+    sources: |
+      - type: file
+        name: stdout
+        paths:
+        - stdout
+    sink: |
+      type: loki
+      url: "http://lokixxx.loki.svc:3100/loki/api/v1/push"
+      encodeJson: true

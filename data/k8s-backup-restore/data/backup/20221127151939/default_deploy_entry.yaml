@@ -1,0 +1,107 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "18"
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"labels":{"app":"entry","group":"com.justep","version":"cb56475"},"name":"entry","namespace":"default"},"spec":{"replicas":1,"revisionHistoryLimit":2,"selector":{"matchLabels":{"app":"entry","group":"com.justep"}},"template":{"metadata":{"labels":{"app":"entry","group":"com.justep","version":"cb56475"},"name":"entry"},"spec":{"containers":[{"image":"com.justep/entry:cb56475","imagePullPolicy":"IfNotPresent","name":"entry","ports":[{"containerPort":8080}],"resources":{"limits":{"cpu":"200m","memory":"1Gi"},"requests":{"cpu":"20m"}},"securityContext":{"privileged":false}},{"env":[{"name":"KONG_DATABASE","value":"off"},{"name":"KONG_ADMIN_LISTEN","value":"0.0.0.0:8001"},{"name":"KONG_DECLARATIVE_CONFIG_STRING","valueFrom":{"configMapKeyRef":{"key":"kong.yml","name":"entry-kong-config"}}}],"image":"kong/kong-gateway:3.0","imagePullPolicy":"IfNotPresent","name":"kong","ports":[{"containerPort":8000},{"containerPort":8001}]}]}}}}
+  creationTimestamp: "2022-11-24T16:45:10Z"
+  generation: 21
+  labels:
+    app: entry
+    group: com.justep
+    version: cb56475
+  name: entry
+  namespace: default
+  resourceVersion: "279578"
+  uid: 5e0396d3-09a3-4847-9167-ca14b23049cf
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: entry
+      group: com.justep
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: entry
+        group: com.justep
+        version: cb56475
+      name: entry
+    spec:
+      containers:
+      - image: com.justep/entry:cb56475
+        imagePullPolicy: IfNotPresent
+        name: entry
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 200m
+            memory: 1Gi
+          requests:
+            cpu: 20m
+        securityContext:
+          privileged: false
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      - env:
+        - name: KONG_DATABASE
+          value: "off"
+        - name: KONG_NGINX_DAEMON
+          value: "off"
+        - name: KONG_NGINX_WORKER_PROCESSES
+          value: auto
+        - name: KONG_MEM_CACHE_SIZE
+          value: 24m
+        - name: KONG_ADMIN_LISTEN
+          value: 0.0.0.0:8001
+        - name: KONG_DECLARATIVE_CONFIG_STRING
+          valueFrom:
+            configMapKeyRef:
+              key: kong.yml
+              name: entry-kong-config
+        image: kong/kong-gateway:3.0
+        imagePullPolicy: IfNotPresent
+        name: kong
+        ports:
+        - containerPort: 8000
+          protocol: TCP
+        - containerPort: 8001
+          protocol: TCP
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2022-11-24T16:45:10Z"
+    lastUpdateTime: "2022-11-26T16:50:47Z"
+    message: ReplicaSet "entry-5b965df99f" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2022-11-27T03:39:38Z"
+    lastUpdateTime: "2022-11-27T03:39:38Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 21
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

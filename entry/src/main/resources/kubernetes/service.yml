@@ -1,0 +1,26 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: @artifactId@
+    version: "@git.commit.id.abbrev@"
+    group: @groupId@
+  name: @artifactId@
+spec:
+  ports:
+  - name: tomcat
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  - name: kong
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  - name: kong-admin
+    port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    app: @artifactId@
+    group: @groupId@

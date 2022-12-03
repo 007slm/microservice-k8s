@@ -1,0 +1,12 @@
+#  helm install --values values.yaml --namespace=loki loki grafana/loki  -create-namespace --wait
+
+loki:
+  commonConfig:
+    replication_factor: 1
+  storage:
+    type: 'filesystem'
+
+
+monitoring:
+  dashboards:
+    namespace: monitoring

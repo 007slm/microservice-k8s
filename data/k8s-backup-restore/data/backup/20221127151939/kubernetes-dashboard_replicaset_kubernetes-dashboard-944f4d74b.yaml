@@ -1,0 +1,97 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  annotations:
+    deployment.kubernetes.io/desired-replicas: "1"
+    deployment.kubernetes.io/max-replicas: "2"
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2022-11-19T13:26:15Z"
+  generation: 2
+  labels:
+    k8s-app: kubernetes-dashboard
+    pod-template-hash: 944f4d74b
+  name: kubernetes-dashboard-944f4d74b
+  namespace: kubernetes-dashboard
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Deployment
+    name: kubernetes-dashboard
+    uid: dc3b210f-b79e-45cd-80a7-e6da32354d25
+  resourceVersion: "84832"
+  uid: 75a10348-e319-48fc-9693-c55c2f03a17f
+spec:
+  replicas: 0
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard
+      pod-template-hash: 944f4d74b
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        k8s-app: kubernetes-dashboard
+        pod-template-hash: 944f4d74b
+    spec:
+      containers:
+      - args:
+        - --namespace=kubernetes-dashboard
+        - --token-ttl=9999999
+        - --enable-insecure-login=true
+        - --enable-skip-login=true
+        - --disable-settings-authorizer=true
+        image: kubernetesui/dashboard:v2.7.0
+        imagePullPolicy: Always
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 9090
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 30
+        name: kubernetes-dashboard
+        ports:
+        - containerPort: 9090
+          name: http
+          protocol: TCP
+        resources: {}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
+          runAsGroup: 2001
+          runAsUser: 1001
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /certs
+          name: kubernetes-dashboard-certs
+        - mountPath: /tmp
+          name: tmp-volume
+      dnsPolicy: ClusterFirst
+      nodeSelector:
+        kubernetes.io/os: linux
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        seccompProfile:
+          type: RuntimeDefault
+      serviceAccount: kubernetes-dashboard
+      serviceAccountName: kubernetes-dashboard
+      terminationGracePeriodSeconds: 30
+      tolerations:
+      - effect: NoSchedule
+        key: node-role.kubernetes.io/master
+      volumes:
+      - name: kubernetes-dashboard-certs
+        secret:
+          defaultMode: 420
+          secretName: kubernetes-dashboard-certs
+      - emptyDir: {}
+        name: tmp-volume
+status:
+  observedGeneration: 2
+  replicas: 0

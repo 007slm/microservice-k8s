@@ -1,0 +1,28 @@
+{
+  "_format_version": "1.1",
+  "services": [
+    {
+      "host": "entry.default.svc",
+      "port": 8080,
+      "protocol": "http",
+      "routes": [
+        {
+          "paths": [
+            "/entry"
+          ]
+        }
+      ]
+    }
+  ],
+  "plugins": [
+    {
+      "name": "prometheus",
+      "config": {
+        "status_code_metrics": true,
+        "latency_metrics": true,
+        "bandwidth_metrics": true,
+        "upstream_health_metrics": true
+      }
+    }
+  ]
+}

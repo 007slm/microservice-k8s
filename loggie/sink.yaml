@@ -1,0 +1,8 @@
+apiVersion: loggie.io/v1beta1
+kind: Sink
+metadata:
+  name: default
+spec:
+  sink: |
+    type: loki
+    url: "http://loki.loki.svc:3100/loki/api/v1/push"
