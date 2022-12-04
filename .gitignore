@@ -1,3 +1,5 @@
 /wsl-backup/
 /wsl-kernel/WSL2-Linux-Kernel-linux-msft-wsl-5.15.74.2/
 /kube-prometheus/
+/wsl-kernel/slm-image-5.15.74.2-iptables-ebpf
+/mysql/data/
